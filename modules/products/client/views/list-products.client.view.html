@@ -3,20 +3,29 @@
     <h1>Products</h1>
   </div>
   <div class="list-group">
-    <a ng-repeat="product in vm.products"
-       ui-sref="products.view({ productId: product._id })"
+   <button class="btn btn-primary" ng-click="order = 'name'">Order by Name</button>
+    <button class = "btn btn-primary" ng-click="order = 'price'">Order by Price</button>
+    <button class="btn btn-primary" ng-click="order = 'created'">Order by Date</button>
+    <br>
+    <br>
+    <a data-ng-repeat="product in vm.products | orderBy: order | filter: search"
+       data-ui-sref="products.view({ productId: product._id })"
        class="list-group-item">
+      
+      <h4 class="list-group-item-heading" data-ng-bind="product.name"></h4>
+      <p>UPC: {{product.upc}}</p>
+      <p>Price: {{product.price | currency}}</p>
+      <p>Inventory: {{product.inventory}}</p>
       <small class="list-group-item-text">
-        Posted on
-        <span ng-bind="product.created | date:'mediumDate'"></span>
+        Created on
+        <span data-ng-bind="product.created | date:'mediumDate'"></span>
         by
-        <span ng-if="product.user" ng-bind="product.user.displayName"></span>
-        <span ng-if="!product.user">Deleted User</span>
+        <span data-ng-if="product.user" data-ng-bind="product.user.displayName"></span>
+        <span data-ng-if="!product.user">Deleted User</span>
       </small>
-      <h4 class="list-group-item-heading" ng-bind="product.name"></h4>
     </a>
   </div>
-  <div class="alert alert-warning text-center" ng-if="vm.products.$resolved && !vm.products.length">
-    No Products yet, why don't you <a ui-sref="products.create">create one</a>?
+  <div class="alert alert-warning text-center" data-ng-if="vm.products.$resolved && !vm.products.length">
+    No Products yet, why don't you <a data-ui-sref="products.create">create one</a>?
   </div>
 </section>
