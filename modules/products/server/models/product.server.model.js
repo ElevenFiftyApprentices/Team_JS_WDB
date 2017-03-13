@@ -17,15 +17,9 @@ var ProductSchema = new Schema({
     trim: true
   },
   upc: {
-    type: Number,
+    type: String,
     default: '',
     required: 'Please fill Product upc',
-    trim: true
-  },
-  price: {
-    type: Number,
-    default: '',
-    required: 'Please fill Product price',
     trim: true
   },
   created: {

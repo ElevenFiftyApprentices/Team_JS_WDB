@@ -9,19 +9,14 @@
           <label class="control-label" for="title">Title</label>
           <input name="title" type="text" ng-model="vm.product.title" id="title" class="form-control" placeholder="Title" required>
           <div ng-messages="vm.form.productForm.title.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Product title is required.</p></div>
+            <p class="help-block error-text" ng-message="required">Product title is required.</p>
+          </div>
         </div>
         <div class="form-group" show-errors>
           <label class="control-label" for="upc">UPC</label>
           <input name="upc" type="text" ng-model="vm.product.upc" id="upc" class="form-control" placeholder="UPC" required>
           <div ng-messages="vm.form.productForm.upc.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Product upc is required.</p></div>
-        </div>
-        <div class="form-group" show-errors>
-          <label class="control-label" for="price">Price</label>
-          <input name="price" type="text" ng-model="vm.product.price" id="price" class="form-control" placeholder="Price" required>
-          <div ng-messages="vm.form.productForm.price.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Product price is required.</p></div>
+            <p class="help-block error-text" ng-message="required">Product upc is required.</p>
           </div>
         </div>
         <div class="form-group">
