@@ -16,10 +16,16 @@ var ProductSchema = new Schema({
     required: 'Please fill Product title',
     trim: true
   },
-  upc: {
+  materials: {
     type: String,
     default: '',
-    required: 'Please fill Product upc',
+    required: 'Please fill Product materials',
+    trim: true
+  },
+  comments: {
+    type: String,
+    default: '',
+    required: 'Please fill Product comments',
     trim: true
   },
   created: {
