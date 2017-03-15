@@ -16,6 +16,18 @@ var ProductSchema = new Schema({
     required: 'Please provide product title',
     trim: true
   },
+  materials: {
+    type: String,
+    default: '',
+    required: 'Please fill Product materials',
+    trim: true
+  },
+  comments: {
+    type: String,
+    default: '',
+    required: 'Please fill Product comments',
+    trim: true
+  },
   price: {
     type: String,
     default: '',
