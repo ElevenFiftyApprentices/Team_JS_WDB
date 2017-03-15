@@ -13,13 +13,13 @@ var ProductSchema = new Schema({
   title: {
     type: String,
     default: '',
-    required: 'Please fill Product title',
+    required: 'Please provide product title',
     trim: true
   },
-  upc: {
+  price: {
     type: String,
     default: '',
-    required: 'Please fill Product upc',
+    required: 'Please provide product price',
     trim: true
   },
   created: {
