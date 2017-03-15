@@ -6,6 +6,7 @@
     <a ng-repeat="product in vm.products"
        ui-sref="products.view({ productId: product._id })"
        class="list-group-item">
+      <h4 class="list-group-item-heading" ng-bind="product.title"></h4>
       <small class="list-group-item-text">
         Posted on
         <span ng-bind="product.created | date:'mediumDate'"></span>
@@ -13,7 +14,6 @@
         <span ng-if="product.user" ng-bind="product.user.displayName"></span>
         <span ng-if="!product.user">Deleted User</span>
       </small>
-      <h4 class="list-group-item-heading" ng-bind="product.name"></h4>
     </a>
   </div>
   <div class="alert alert-warning text-center" ng-if="vm.products.$resolved && !vm.products.length">

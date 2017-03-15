@@ -1,6 +1,8 @@
 <section>
   <div class="page-header">
-    <h2 ng-bind="vm.product.title"></h2>
+
+     <h2 ng-bind="vm.product.title"></h2>
+
   </div>
   <div class="pull-right"
        ng-show="vm.product.isCurrentUserOwner">
@@ -31,5 +33,8 @@
     <h6>Comments:</h6>
     <p class="lead" ng-bind="vm.product.comments"></p>
   </div>
-  
+  <div>Price:
+    <p class="lead" ng-bind="vm.product.price"></p>
+  </div>
+
 </section>
