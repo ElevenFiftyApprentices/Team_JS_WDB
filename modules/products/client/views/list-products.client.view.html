@@ -3,6 +3,12 @@
     <h1>Products</h1>
   </div>
   <div class="list-group">
+
+    <button class="btn btn-primary" ng-click="orderBy = 'name'">Order by Name</button>
+    <button class="btn btn-primary" ng-click="orderBy = 'created'">Order by Date</button>
+    <br />
+    <br />
+
     <a ng-repeat="product in vm.products"
        ui-sref="products.view({ productId: product._id })"
        class="list-group-item">

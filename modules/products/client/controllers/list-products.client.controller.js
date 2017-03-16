@@ -12,4 +12,5 @@
 
     vm.products = ProductsService.query();
   }
+  
 }());
