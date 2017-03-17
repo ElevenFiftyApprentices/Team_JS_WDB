@@ -16,12 +16,6 @@ var ProductSchema = new Schema({
     required: 'Please provide product title',
     trim: true
   },
-  // materials: {
-  //   type: String,
-  //   default: '',
-  //   required: 'Please fill Product materials',
-  //   trim: true
-  // },
   price: {
     type: String,
     default: '',
@@ -31,7 +25,6 @@ var ProductSchema = new Schema({
   comments: {
     type: String,
     default: '',
-    required: 'Please fill Product comments',
     trim: true
   },
   color: {
@@ -51,10 +44,13 @@ var ProductSchema = new Schema({
   material: {
     type: String,
     default: '',
+    required: 'Please provide a material',
+    trim: true
   },
   materials: {
     type: [],
     default: [],
+    required: 'Please provide a material',
     trim: true
   }
 

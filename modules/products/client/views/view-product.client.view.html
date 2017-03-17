@@ -1,9 +1,9 @@
 <section>
   <div class="page-header">
-
      <h2 ng-bind="vm.product.title"></h2>
-
   </div>
+
+<!--Edit/Remove Buttons-->
   <div class="pull-right"
        ng-show="vm.product.isCurrentUserOwner">
     <a class="btn btn-primary"
@@ -15,10 +15,10 @@
     </a>
   </div>
 
+<!--Page Display-->
   <div>
     <h6>Materials:</h6>
-
-    <p class="lead" ng-bind="vm.product.materials" ng-style="{color: vm.product.color}"></p>
+    <p class="lead" ng-repeat="material in vm.product.materials" ng-style="{color: vm.product.color}">{{material.material}}</p>
   </div>
   <div>
     <h6>Price:</h6>
@@ -29,6 +29,7 @@
     <p class="lead" ng-bind="vm.product.comments" ng-style="{color: vm.product.color}"></p>
   </div>
 
+<!--User Postings-->
   <small>
     <em class="text-muted">
       Posted on
