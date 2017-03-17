@@ -1,3 +1,8 @@
+section {
+  padding-bottom: 25px;
+  background-color: #FFFBEA;
+}
+
 .content {
   margin-top: 50px;
 }
@@ -34,4 +39,27 @@ a:hover .header-profile-image {
 }
 .has-error .help-inline.error-text {
   display: inline;
+}
+
+.lead {
+  font-family: Verdana;
+  color: black;
+  font-size: 350%;
+}
+
+.second {
+  padding-left: 200px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  color: #416d1b;
+}
+
+.jumbotron {
+  background-image: url("../img/oranges.jpg");
+  background-color: "#EDDEA4";
+  color: black;
+}
+
+.row {
+  color: #416d1b;
 }
