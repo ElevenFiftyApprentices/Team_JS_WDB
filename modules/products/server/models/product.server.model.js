@@ -34,6 +34,12 @@ var ProductSchema = new Schema({
     required: 'Please fill Product comments',
     trim: true
   },
+  color: {
+    type: String,
+    default: '',
+    required: 'Please use a proper hex code',
+    trim: true
+  },
   created: {
     type: Date,
     default: Date.now

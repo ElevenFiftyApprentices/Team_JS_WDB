@@ -17,15 +17,16 @@
 
   <div>
     <h6>Materials:</h6>
-    <p class="lead" ng-bind="vm.product.materials"></p>
+
+    <p class="lead" ng-bind="vm.product.materials" ng-style="{color: vm.product.color}"></p>
   </div>
   <div>
     <h6>Price:</h6>
-    <p class="lead" ng-bind="vm.product.price"></p>
+    <p class="lead" ng-bind="vm.product.price" ng-style="{color: vm.product.color}"></p>
   </div>
   <div>
     <h6>Comments:</h6>
-    <p class="lead" ng-bind="vm.product.comments"></p>
+    <p class="lead" ng-bind="vm.product.comments" ng-style="{color: vm.product.color}"></p>
   </div>
 
   <small>
@@ -38,8 +39,5 @@
       <span ng-if="!vm.product.user">Deleted User</span>
     </em>
   </small>
-  <br />
-
-
 
 </section>
