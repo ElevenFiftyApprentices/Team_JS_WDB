@@ -41,6 +41,11 @@ a:hover .header-profile-image {
   display: inline;
 }
 
+.addMaterial {
+  position: absolute;
+  float: left;
+  left: 1px;
+
 .lead {
   font-family: Verdana;
   color: black;

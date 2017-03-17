@@ -4,21 +4,74 @@
   </div>
 
   <div class="col-md-12">
-    <form name="vm.form.productForm" class="form-horizontal" ng-submit="vm.save(vm.form.productForm.$valid)" novalidate>
+    <form name="vm.form.productList" class="form-horizontal" ng-submit="vm.save(vm.form.productList.$valid)" novalidate>
       <fieldset>
-        <div class="form-group" show-errors>
-          <label class="control-label" for="title">Title</label>
-          <input name="title" type="text" ng-model="vm.product.title" id="title" class="form-control" placeholder="Title" required>
-          <div ng-messages="vm.form.productForm.title.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Product title is required.</p>
+        <div class="row">
+          <div class="col-xs-6 col-md-6">
+            <div class="form-group" show-errors>
+              <label class="control-label" for="title">Title</label>
+              <input name="title" type="text" ng-model="vm.product.title" id="title" class="form-control" placeholder="Title" required>
+              <div ng-messages="vm.form.productForm.title.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Product title is required.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="form-group" show-errors>
-         <label class="control-label" for="materials">Materials</label>
-          <input name="materials" type="text" ng-model="vm.product.materials" id="materials" class="form-control" placeholder="Materials" required>
-          <div ng-messages="vm.form.productForm.materials.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Product materials is required.</p>
+        <form name="vm.form.productForm" class="form-horizontal" ng-submit="vm.addMaterial(vm.form.productmaterial.$valid)" novalidate>
+        <div class="row" align="left">
+          <div class="col-xs-6 col-md-6">
+            <div class="form-group" show-errors>
+             <label class="control-label" for="material">Materials</label>
+              <input name="material" type="text" ng-model="vm.product.material" id="material" class="form-control" placeholder="Materials">
+              <div ng-messages="vm.form.productForm.material.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Product material is required.</p>
+              </div>
+            </div>
+            <button ng-click="vm.addMaterial()" class="addMaterial btn btn-primary">Add Material</button>
+            <br />
+            <br />
+            <div class="form-group" show-errors>
+              <label class="control-label" for="price">Price</label>
+              <input name="price" type="text" ng-model="vm.product.price" id="price" class="form-control" placeholder="Price" required>
+              <div ng-messages="vm.form.productForm.price$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Product Price is required.</p>
+             </div>
+            </div>
+            <div class="form-group" show-errors>
+              <label class="control-label" for="comments">Comments</label>
+              <textarea name="comments" type="text" rows="3" ng-model="vm.product.comments" id="comments" class="form-control" placeholder="Comments" required></textarea>
+              <div ng-messages="vm.form.productForm.comments.$error" role="alert">
+                <p class="help-block error-text" ng-message="required">Product comments is required.</p>
+              </div>
+            </div>
+            <div class="form-group">
+            <button type="submit" class="btn btn-default">{{vm.product._id ? 'Update' : 'Create'}}</button>
+            </div>
+            <div ng-show="vm.error" class="text-danger">
+              <strong ng-bind="vm.error"></strong>
+            </div>
           </div>
+            <div align="center">
+            <div class="col-xs-6 col-md-6">
+                <h3>Material List</h3>
+                <div class="card">
+                  <ul style="list-style: none; ">
+                    
+                      <div class=" pull-left">
+                        <label><li class="list" style="text-align: left" ng-repeat="material in vm.product.materials">
+                        <input type="checkbox" class="checkbox1" ng-click="functionItemChecked()"> {{material.material}}
+                        
+                        </li></label>
+                      </div>
+                      
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+          </div>         
+
         </div>
         <div class="form-group" show-errors>
           <label class="control-label" for="price">Price</label>
@@ -52,5 +105,7 @@
         </div>
       </fieldset>
     </form>
-  </div>
+  </div>  
+ 
+    </div>
 </section>
