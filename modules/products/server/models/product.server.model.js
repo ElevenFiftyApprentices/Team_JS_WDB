@@ -16,12 +16,12 @@ var ProductSchema = new Schema({
     required: 'Please provide product title',
     trim: true
   },
-  materials: {
-    type: String,
-    default: '',
-    required: 'Please fill Product materials',
-    trim: true
-  },
+  // materials: {
+  //   type: String,
+  //   default: '',
+  //   required: 'Please fill Product materials',
+  //   trim: true
+  // },
   price: {
     type: String,
     default: '',
@@ -41,7 +41,18 @@ var ProductSchema = new Schema({
   user: {
     type: Schema.ObjectId,
     ref: 'User'
+  },
+  material: {
+    type: String,
+    default: '',
+  },
+  materials: {
+    type: [],
+    default: [],
+    trim: true
   }
+
+
 });
 
 mongoose.model('Product', ProductSchema);
