@@ -44,13 +44,11 @@ var ProductSchema = new Schema({
   material: {
     type: String,
     default: '',
-    required: 'Please provide a material',
     trim: true
   },
   materials: {
     type: [],
     default: [],
-    required: 'Please provide a material',
     trim: true
   }
 

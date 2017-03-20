@@ -28,15 +28,14 @@
     }
 
     // add items to list array
-    function addMaterial(isValid) {
+    function addMaterial() {
+      vm.productList = vm.product.materials;
       vm.productList.push({
         material: vm.product.material,
-        priority: vm.product.priority,
         isChecked: false
       });
 
       vm.product.material = '';
-      vm.product.priority = '';
     }
     // Save Product
     function save(isValid) {
