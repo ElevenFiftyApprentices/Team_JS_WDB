@@ -3,6 +3,7 @@
     <h1>Products</h1>
   </div>
   <div class="list-group">
+
     <a ng-repeat="product in vm.products"
        ui-sref="products.view({ productId: product._id })"
        class="list-group-item">

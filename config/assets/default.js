@@ -6,6 +6,7 @@ module.exports = {
       css: [
         'public/lib/bootstrap/dist/css/bootstrap.css',
         'public/lib/bootstrap/dist/css/bootstrap-theme.css'
+        'modules/core/client/img/oranges.jpg'
       ],
       js: [
         'public/lib/angular/angular.js',
@@ -22,6 +23,7 @@ module.exports = {
     },
     css: [
       'modules/*/client/css/*.css'
+      'modules/core/client/img/oranges.jpg'
     ],
     less: [
       'modules/*/client/less/*.less'

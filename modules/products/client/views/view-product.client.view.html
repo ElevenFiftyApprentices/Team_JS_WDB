@@ -1,8 +1,14 @@
 <section>
   <div class="page-header">
+<<<<<<< Updated upstream
     <h1 ng-bind="vm.product.title"></h1>
     <h1 ng-bind="vm.product.upc"></h1>
+=======
+     <h2 ng-bind="vm.product.title"></h2>
+>>>>>>> Stashed changes
   </div>
+
+<!--Edit/Remove Buttons-->
   <div class="pull-right"
        ng-show="vm.product.isCurrentUserOwner">
     <a class="btn btn-primary"
@@ -13,6 +19,25 @@
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>
+<<<<<<< Updated upstream
+=======
+
+<!--Page Display-->
+  <div>
+    <h6>Materials:</h6>
+    <p class="lead" ng-repeat="material in vm.product.materials" ng-style="{color: vm.product.color}">{{material.material}}</p>
+  </div>
+  <div>
+    <h6>Price:</h6>
+    <p class="lead" ng-bind="vm.product.price" ng-style="{color: vm.product.color}"></p>
+  </div>
+  <div>
+    <h6>Comments:</h6>
+    <p class="lead" ng-bind="vm.product.comments" ng-style="{color: vm.product.color}"></p>
+  </div>
+
+<!--User Postings-->
+>>>>>>> Stashed changes
   <small>
     <em class="text-muted">
       Posted on
@@ -23,5 +48,9 @@
       <span ng-if="!vm.product.user">Deleted User</span>
     </em>
   </small>
+<<<<<<< Updated upstream
   <p class="lead" ng-bind="vm.product.content"></p>
+=======
+
+>>>>>>> Stashed changes
 </section>

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+
+html {
+  background-color: #FFFBEA;
+  background-size: cover;
+}
+>>>>>>> 74e984486d28a53b485fe6445b554781fb29cc7f
 section {
   padding-bottom: 25px;
   background-color: #FFFBEA;
@@ -41,6 +49,14 @@ a:hover .header-profile-image {
   display: inline;
 }
 
+<<<<<<< HEAD
+=======
+.addMaterial {
+  position: absolute;
+  float: left;
+  left: 1px;
+
+>>>>>>> 74e984486d28a53b485fe6445b554781fb29cc7f
 .lead {
   font-family: Verdana;
   color: black;
